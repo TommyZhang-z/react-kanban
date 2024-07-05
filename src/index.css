@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    * {
+        cursor: default; /* Ensure default cursor unless specified */
+      }
+      
+      [draggable="true"] {
+        cursor: grab; /* Ensure grab cursor on draggable elements */
+      }
+      
+      [draggable="true"]:active {
+        cursor: grabbing; /* Ensure grabbing cursor when dragging */
+      }
+}
